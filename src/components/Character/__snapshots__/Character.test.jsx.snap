@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render the Charater component 1`] = `
+exports[`should render the Character component 1`] = `
 <div>
   <section
     style="display: flex; flex-direction: column;"

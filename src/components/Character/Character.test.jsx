@@ -1,7 +1,7 @@
 import { screen, render } from "@testing-library/react";
 import Character from "./Character";
 
-it("should render the Charater component", () => {
+it("should render the Character component", () => {
   const { container } = render(
     <Character head="bird" middle="fancy" pants="blue" />
   );

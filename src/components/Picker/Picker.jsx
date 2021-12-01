@@ -54,7 +54,7 @@ export default function Picker({
       </label>
 
       <label>
-        New Phrase
+        New Phrase:
         <input
           type="text"
           value={newPhrase}
