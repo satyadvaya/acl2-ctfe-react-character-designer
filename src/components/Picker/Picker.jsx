@@ -1,8 +1,16 @@
 import React from "react";
 
-export default function Picker({ head, onHeadChange, middle, onMiddleChange }) {
-  const headImages = ["dog", "bird", "duck"];
-  const middleImages = ["red", "pink", "blue", "fancy"];
+export default function Picker({
+  head,
+  onHeadChange,
+  middle,
+  onMiddleChange,
+  pants,
+  onPantsChange,
+}) {
+  const headImages = ["bird", "dog", "duck", "horse"];
+  const middleImages = ["blue", "fancy", "pink", "red"];
+  const pantsImages = ["blue", "dog", "leg", "white"];
 
   return (
     <div>
@@ -25,6 +33,18 @@ export default function Picker({ head, onHeadChange, middle, onMiddleChange }) {
           onChange={(event) => onMiddleChange(event.target.value)}
         >
           {middleImages.map((image) => {
+            return <option key={image}>{image}</option>;
+          })}
+        </select>
+      </label>
+
+      <label>
+        Pants
+        <select
+          value={pants}
+          onChange={(event) => onPantsChange(event.target.value)}
+        >
+          {pantsImages.map((image) => {
             return <option key={image}>{image}</option>;
           })}
         </select>

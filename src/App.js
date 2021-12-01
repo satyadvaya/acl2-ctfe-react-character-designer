@@ -7,6 +7,7 @@ import React, { useState } from "react";
 function App() {
   const [head, setHead] = useState("");
   const [middle, setMiddle] = useState("");
+  const [pants, setPants] = useState("");
 
   return (
     <div className="App">
@@ -18,9 +19,11 @@ function App() {
             onHeadChange={setHead}
             middle={middle}
             onMiddleChange={setMiddle}
+            pants={pants}
+            onPantsChange={setPants}
           />
           <Display />
-          <Character />
+          <Character head={head} middle={middle} pants={pants} />
         </header>
       </main>
     </div>
