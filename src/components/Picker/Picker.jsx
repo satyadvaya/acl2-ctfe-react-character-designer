@@ -7,6 +7,9 @@ export default function Picker({
   onMiddleChange,
   pants,
   onPantsChange,
+  newPhrase,
+  setNewPhrase,
+  handleClick,
 }) {
   const headImages = ["bird", "dog", "duck", "horse"];
   const middleImages = ["blue", "fancy", "pink", "red"];
@@ -49,6 +52,18 @@ export default function Picker({
           })}
         </select>
       </label>
+
+      <label>
+        New Phrase
+        <input
+          type="text"
+          value={newPhrase}
+          onChange={(event) => setNewPhrase(event.target.value)}
+        />
+      </label>
+      <button type="button" onClick={handleClick}>
+        Submit Phrase!
+      </button>
     </div>
   );
 }

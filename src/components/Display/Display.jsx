@@ -1,3 +1,9 @@
-export default function Display() {
-  return <h1>Display</h1>
+export default function Display({ library }) {
+  return (
+    <div>
+      {library.map((phrase) => (
+        <p>{phrase}</p>
+      ))}
+    </div>
+  );
 }

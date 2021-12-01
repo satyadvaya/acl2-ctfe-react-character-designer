@@ -8,6 +8,12 @@ function App() {
   const [head, setHead] = useState("");
   const [middle, setMiddle] = useState("");
   const [pants, setPants] = useState("");
+  const [newPhrase, setNewPhrase] = useState("");
+  const [library, setLibrary] = useState([]);
+
+  const handleClick = () => {
+    setLibrary((prevState) => [...prevState, newPhrase]);
+  };
 
   return (
     <div className="App">
@@ -21,8 +27,11 @@ function App() {
             onMiddleChange={setMiddle}
             pants={pants}
             onPantsChange={setPants}
+            newPhrase={newPhrase}
+            setNewPhrase={setNewPhrase}
+            handleClick={handleClick}
           />
-          <Display />
+          <Display library={library} />
           <Character head={head} middle={middle} pants={pants} />
         </header>
       </main>
