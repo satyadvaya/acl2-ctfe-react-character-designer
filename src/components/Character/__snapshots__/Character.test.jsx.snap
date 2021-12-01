@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the Charater component 1`] = `
+<div>
+  <section
+    style="display: flex; flex-direction: column;"
+  >
+    <article
+      class="head"
+      style="height: 150px; width: 150px; background-image: url(./bird-head.png); background-size: cover; background-repeat: no-repeat;"
+    />
+    <article
+      class="middle"
+      style="height: 150px; width: 150px; background-image: url(./fancy-middle.png); background-size: cover; background-repeat: no-repeat;"
+    />
+    <article
+      class="pants"
+      style="height: 150px; width: 150px; background-image: url(./blue-pants.png); background-size: cover; background-repeat: no-repeat;"
+    />
+  </section>
+</div>
+`;
