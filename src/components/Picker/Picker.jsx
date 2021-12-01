@@ -1,5 +1,21 @@
-import React from 'react'
+import React from "react";
 
-export default function Picker() {
-  return <h1>Picker</h1>
+export default function Picker({ head, onHeadChange }) {
+  const headImages = ["dog", "bird", "duck"];
+
+  return (
+    <div>
+      <label>
+        Head
+        <select
+          value={head}
+          onChange={(event) => onHeadChange(event.target.value)}
+        >
+          {headImages.map((image) => {
+            return <option key={image}>{image}</option>;
+          })}
+        </select>
+      </label>
+    </div>
+  );
 }
